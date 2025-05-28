@@ -1,5 +1,5 @@
-from aidd.models.uml.uml_attribute import UmlAttribute
-from aidd.models.uml.uml_method import UmlMethod
+from reweld.models.uml.uml_attribute import UmlAttribute
+from reweld.models.uml.uml_method import UmlMethod
 
 
 class UmlClass:
@@ -10,7 +10,11 @@ class UmlClass:
         self.extends = extends
 
     def to_source(self) -> str:
-        lines = [f"class {self.name}({self.extends}):"]
+        # Class signature
+        if self.extends == "object" or not self.extends:
+            lines = [f"class {self.name}:"]
+        else:
+            lines = [f"class {self.name}({self.extends}):"]
 
         if not self.attributes and not self.methods:
             lines.append("    pass")

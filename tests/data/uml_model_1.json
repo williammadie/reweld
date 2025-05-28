@@ -1,0 +1,28 @@
+{
+    "classes": [
+        {
+            "name": "SampleClass",
+            "attributes": [
+                {
+                    "name": "count",
+                    "type": "int"
+                },
+                {
+                    "name": "label",
+                    "type": "String"
+                },
+                {
+                    "name": "value",
+                    "type": "complex"
+                }
+            ],
+            "methods": [
+                {
+                    "name": "reset",
+                    "returnType": "void",
+                    "parameters": []
+                }
+            ]
+        }
+    ]
+}

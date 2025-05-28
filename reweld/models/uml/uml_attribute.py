@@ -1,5 +1,5 @@
 
-from aidd.models.uml.type_mapper import TypeMapper
+from reweld.models.uml.type_mapper import TypeMapper
 
 
 class UmlAttribute:

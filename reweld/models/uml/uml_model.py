@@ -1,7 +1,7 @@
 import json
 from typing import Self
 
-from aidd.models.uml.uml_class import UmlClass
+from reweld.models.uml.uml_class import UmlClass
 
 class UmlModel:
 
