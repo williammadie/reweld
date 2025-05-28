@@ -16,27 +16,27 @@ class UmlModel:
         return json.loads(file_content)
     
     def parse_classes(self):
+        class_defs = {cls["name"]: cls for cls in self.model.get("classes", [])}
+
+        def get_parent_attributes(class_def):
+            parent_name = class_def.get("extends", "object")
+            if parent_name == "object":
+                return []
+            parent_def = class_defs.get(parent_name)
+            if not parent_def:
+                return []
+            return parent_def.get("attributes", [])
+    
         return [
             UmlClass(
                 cls["name"],
                 cls.get("attributes", []),
                 cls.get("methods", []),
-                cls.get("extends", "object")
+                cls.get("extends", "object"),
+                parent_attributes=get_parent_attributes(cls)
             )
             for cls in self.model.get("classes", [])
         ]
 
     def to_source_code(self: Self) -> str:
         return "\n\n".join(cls.to_source() for cls in self.classes)
-    
-    @staticmethod
-    def map_type_static(uml_type: str) -> str:
-        type_mapping = {
-            "String": "str",
-            "int": "int",
-            "float": "float",
-            "double": "float",
-            "boolean": "bool",
-            "void": "None"
-        }
-        return type_mapping.get(uml_type, uml_type)

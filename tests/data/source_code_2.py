@@ -7,8 +7,8 @@ class Person:
         pass
 
 class Student(Person):
-    def __init__(self, studentId: str):
-        super().__init__()
+    def __init__(self, name: str, age: int, studentId: str):
+        super().__init__(name, age)
         self.studentId = studentId
 
     def study(self) -> None:
