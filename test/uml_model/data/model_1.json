@@ -1,0 +1,41 @@
+{
+    "classes": [
+        {
+            "name": "Person",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "String"
+                },
+                {
+                    "name": "age",
+                    "type": "int"
+                }
+            ],
+            "methods": [
+                {
+                    "name": "greet",
+                    "returnType": "void",
+                    "parameters": []
+                }
+            ]
+        },
+        {
+            "name": "Student",
+            "attributes": [
+                {
+                    "name": "studentId",
+                    "type": "String"
+                }
+            ],
+            "methods": [
+                {
+                    "name": "study",
+                    "returnType": "void",
+                    "parameters": []
+                }
+            ],
+            "extends": "Person"
+        }
+    ]
+}
