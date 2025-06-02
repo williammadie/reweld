@@ -1,0 +1,34 @@
+[
+    {
+        "name": "SampleClass",
+        "bases": [],
+        "attributes": [
+            {
+                "name": "count"
+            },
+            {
+                "name": "label"
+            },
+            {
+                "name": "value"
+            }
+        ],
+        "methods": [
+            {
+                "name": "__init__",
+                "args": [
+                    "self",
+                    "count",
+                    "label",
+                    "value"
+                ]
+            },
+            {
+                "name": "reset",
+                "args": [
+                    "self"
+                ]
+            }
+        ]
+    }
+]

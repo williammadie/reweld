@@ -1,0 +1,46 @@
+[
+    {
+        "name": "MyClass",
+        "bases": [],
+        "attributes": [
+            {
+                "name": "value"
+            }
+        ],
+        "methods": [
+            {
+                "name": "__init__",
+                "args": [
+                    "self",
+                    "value"
+                ]
+            },
+            {
+                "name": "get_value",
+                "args": [
+                    "self"
+                ]
+            },
+            {
+                "name": "set_value",
+                "args": [
+                    "self",
+                    "new_value"
+                ]
+            },
+            {
+                "name": "increment_value",
+                "args": [
+                    "self",
+                    "increment"
+                ]
+            },
+            {
+                "name": "reset_value",
+                "args": [
+                    "self"
+                ]
+            }
+        ]
+    }
+]
